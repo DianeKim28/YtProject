@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/YtProject.main.iml" filepath="$PROJECT_DIR$/.idea/modules/YtProject.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/[안전폴더]YtProject.iml" filepath="$PROJECT_DIR$/.idea/[안전폴더]YtProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.YtProject.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.YtProject.main.iml" />
     </modules>
   </component>
 </project>

@@ -9,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    {{#article}}
+    {{#article}}  <!--#을 넣고 안넣고의 차이는?-->
     <tr>
         <th>{{id}}</th>
         <td>{{title}}</td>
@@ -18,5 +18,8 @@
     {{/article}}
     </tbody>
 </table>
+
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a> <!--모델에 등록된 아티클 데이터의 아이디 가져올수있다.-->
 <a href="/articles">Go to Article List</a>
+
 {{>layouts/footer}}
