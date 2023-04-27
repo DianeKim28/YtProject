@@ -19,7 +19,10 @@
     </tbody>
 </table>
 
-<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a> <!--모델에 등록된 아티클 데이터의 아이디 가져올수있다.-->
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a>
+<!--HTML에서는  post,get,update,delete 중 post,get만 지원함.
+임시로 get방식으로 해둠. 나중에 자바스크립트로 수정. -->
+<a href="/articles/{{article.id}}/delete" class="btn btn-danger">Delete</a><!--모델에 등록된 아티클 데이터의 아이디 가져올수있다.-->
 <a href="/articles">Go to Article List</a>
 
 {{>layouts/footer}}
