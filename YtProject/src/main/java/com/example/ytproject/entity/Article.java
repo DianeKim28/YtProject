@@ -6,6 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import javax.persistence.*;
 
 @Entity  //DB가 해당객체를 인식가능
@@ -24,7 +29,21 @@ public class Article {
     @Column
     private String content;
 
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
+    public void patch(Article article) {
+        if (article.title != null)
+            this.title = article.title;
+        if (article.content !=null)
+            this.content = article.content;
+    }
+}
 
 
 

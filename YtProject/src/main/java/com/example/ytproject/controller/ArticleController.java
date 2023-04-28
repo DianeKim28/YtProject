@@ -1,27 +1,28 @@
 package com.example.ytproject.controller;
 
+
 import com.example.ytproject.dto.ArticleForm;
 import com.example.ytproject.entity.Article;
+
 import com.example.ytproject.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Controller
-@Slf4j //로깅을 위한 어노테이션.
+@Slf4j //로깅을 위한 롬복 어노테이션.
 public class ArticleController {
-    @Autowired  //스프링부트가 미리 생성해놓은 객체를 가져다가 자동 연결!
-    private ArticleRepository articleRepository;  //원래 객체를 만들어야 하지만 스프링부트는 자체적으로 알아서 해줌.
 
+    @Autowired //스프링부트가 미리 생성해둔 리파지토리 객체를 가져옴.(DI)
+    private ArticleRepository articleRepository;
     @GetMapping("/articles/new")
     public String newArticleForm() {
         return "articles/new";
