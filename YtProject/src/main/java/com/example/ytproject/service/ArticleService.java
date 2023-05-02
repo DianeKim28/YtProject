@@ -62,7 +62,7 @@ public class ArticleService {
         articleRepository.delete(target);
         return  target;
     }
-    @Transactional
+    @Transactional  //해덩 매소드를 트랜잭션으로 묶는다.
     public List<Article> createArticles(List<ArticleForm> dtos){
         //dto 묶음을 entity  묶음으로 변환
         List<Article> articlesList = dtos.stream()
@@ -71,6 +71,11 @@ public class ArticleService {
         //entity 묶음을 DB로 저장
         articlesList.stream()
                 .forEach(article -> articleRepository.save(article));
+
+        //        for 문으로 작성했다면
+        //        for(int i = 0; i < articlesList.size();i++){
+        //            Article article = articlesList.get(i);
+        //            articleRepository = articlesList.get(i);
         //강제 예외 발생
         articleRepository.findById(-1L).orElseThrow(
                 () -> new IllegalArgumentException("결제실패!")
